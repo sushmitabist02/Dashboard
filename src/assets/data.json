@@ -1,0 +1,54 @@
+[
+  {
+    "CategoryName": "CSPM Executive Dashboard",
+    "WidgetList": [
+      {
+        "WidgetName": "Cloud Accounts",
+        "WidgetText": "Displays an overview of security metrics and compliance status."
+      },
+      {
+        "WidgetName": "Cloud Account Risk Assessment",
+        "WidgetText": "Provides a detailed analysis of identified risks and vulnerabilities."
+      }
+    ]
+  },
+  {
+    "CategoryName": "CWPP Dashboard",
+    "WidgetList": [
+      {
+        "WidgetName": "Top 5 Namespace Specific Alerts",
+        "WidgetText": "Monitors and reports on the protection status of workloads."
+      },
+      {
+        "WidgetName": "Workload Alerts",
+        "WidgetText": "Shows detected threats and the response actions taken."
+      }
+    ]
+  },
+  {
+    "CategoryName": "Registry Scan",
+    "WidgetList": [
+      {
+        "WidgetName": "Image Risk Assessment",
+        "WidgetText": "Monitors and reports on the protection status of workloads."
+      },
+      {
+        "WidgetName": "Image Security Issues",
+        "WidgetText": "Shows detected threats and the response actions taken."
+      }
+    ]
+  },
+  {
+    "CategoryName": "Ticket Scan",
+    "WidgetList": [
+      {
+        "WidgetName": "Ticket Risk Assessment",
+        "WidgetText": "Monitors and reports on the protection status of workloads."
+      },
+      {
+        "WidgetName": "Ticket Security Issues",
+        "WidgetText": "Shows detected threats and the response actions taken."
+      }
+    ]
+  }
+]

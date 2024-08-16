@@ -1,0 +1,271 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+  
+.sidebarHeader, .addbarHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: rgb(3, 3, 76);
+  color: white;
+  font-size: 14px;
+}
+  
+.closeIcon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.categoryTitle{
+  font-size: 16px;
+  margin-left: 12px;
+}
+.categoryButton {
+  background-color: transparent; 
+  border: none;
+  padding: 10px 20px; 
+  cursor: pointer;
+  position: relative; 
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+  
+.categoryButton::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; 
+  left: 0;
+  right: 0;
+  height: 4px; 
+  background-color: #ccc; 
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.categoryButton.active::after {
+  background-color: rgb(3, 3, 76); 
+  width: 100%; 
+}
+
+.categoryButton:hover::after {
+  background-color: rgb(3, 3, 76); 
+}
+
+.categoryButton.active {
+  color: rgb(3, 3, 76); 
+}
+  
+.categoryButton:hover {
+  color: rgb(3, 3, 76);
+}
+  
+  .sidebarNavigation {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+
+  .sidebarContent {
+    overflow-y: auto;
+    max-height: calc(100% - 80px);
+    padding: 10px;
+  }
+  
+  .sidebarItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    justify-content: flex-start;
+  }
+  
+  .deleteIcon {
+    bottom:7px;
+    cursor: pointer;
+    font-size: 16px;
+    color: red; 
+  }
+  .sidebarItem input {
+    margin-right: 20px;
+  }
+  
+.sidebarItem input[type="checkbox"] {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgb(3, 3, 76); 
+    border-radius: 3px; 
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebarItem input[type="checkbox"]:checked {
+    background-color: rgb(3, 3, 76); 
+}
+
+.sidebarItem input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 2px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+  .sidebarButtons {
+    position: absolute;
+    bottom: 12px;
+    right: 26px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .confirmButton,
+  .cancelButton {
+    padding: 10px;
+    cursor: pointer;
+    width: 120px;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+
+  .confirmButton{
+    background-color: rgb(3, 3, 76);
+    color: white;
+   
+  }
+
+  
+  .cardContainer {
+      position: relative;    
+      transition: filter 0.3s ease;
+      padding: 16px; 
+      background-color:#f0f0f0; 
+      padding-bottom: 60px;
+    
+  }
+  
+  .cardRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  
+  .card {
+    border: 10px solid #e9f1f8;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+    padding: 20px;
+    width: 430px;
+    height: 250px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    padding-right: 0;
+  }
+
+  .card h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .card .deleteIcon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff0000; 
+  }
+  
+  .card p {
+    margin-top: 12px; 
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .addWidget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    width: 32.5%;
+    height: 250px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 0px;
+  }
+  
+  .addWidget:hover {
+    background-color: rgb(115, 115, 236); 
+  }
+  
+  .addWidget button {
+    background-color: transparent; 
+    border: 1px solid rgb(3, 3, 76); 
+    border-radius: 10px;
+    font-size: 12px; 
+    color: rgb(3, 3, 76); 
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .addWidget .icon {
+    width: 10px;
+    height: 10px;
+    margin-right: 0px;
+    stroke: rgb(3, 3, 76); 
+  }
+  
+  .addbar {
+    position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  border-radius: 10px;
+  }
+  .addbarHeader {
+    background-color: rgb(3, 3, 76); 
+    padding: 4px 10px;
+    color: white;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .addCategoryHeading {
+    margin-left: 20px;
+  }
+
+  .addBtn {
+    cursor: auto;
+    border-radius: 20px;
+  }
